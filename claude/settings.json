@@ -1,0 +1,32 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
+  },
+  "awsCredentialExport": "aws-sso process --profile 'gen-ai-models:gen-ai-inference' | jq '{Credentials: . | {AccessKeyId, SecretAccessKey, SessionToken}}'",
+  "env": {
+    "CLAUDE_CODE_USE_BEDROCK": "1",
+    "AWS_REGION": "us-west-2",
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "16000",
+    "MAX_THINKING_TOKENS": "8000",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "arn:aws:bedrock:us-west-2:119268834092:application-inference-profile/si0bw9fplfhv",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "arn:aws:bedrock:us-west-2:119268834092:application-inference-profile/ovkqt1jtxry1",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "arn:aws:bedrock:us-west-2:119268834092:application-inference-profile/m2bcq7kjagev",
+    "NOOP_HELPER_URL": "http://127.0.0.1:8080",
+    "NOOP_HELPER_TOKEN": ""
+  },
+  "enabledPlugins": {
+    "voltus-product-management@voltus-org": true,
+    "voltus-engineering@voltus-org": true,
+    "superpowers@voltus-org": true
+  },
+  "extraKnownMarketplaces": {
+    "voltus-org": {
+      "source": {
+        "source": "github",
+        "repo": "voltusdev/voltus-custom-skills-hub"
+      }
+    }
+  }
+}
